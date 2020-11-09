@@ -1,0 +1,211 @@
+.header-top{
+    height: 100%;
+    &__img-logo{
+        width: 130px;
+        height: 30px;
+        object-fit: cover;
+    }
+    .language__img{
+        border-radius: 50%;
+    }
+    .header__text{
+        font-family: Os;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 0.8em;
+        color: $col-3c;
+        margin:0 6px;
+    }
+    .form-search{
+        width: 150px;
+        height: 34px;
+        position: relative;
+        background-color: #fafafa;
+        box-shadow: 0px 0px 8px -3px #807c7c;
+        border-radius: 5px;
+        margin-left: 5px;
+
+        input[name="search"], button[type="submit"]{
+            border:0;
+            height: 36px;
+            border-radius: 5px;
+            outline: none;
+        }
+        
+        input[name="search"]{
+            width: 100%;
+            height: 36px;
+            position: absolute;
+            z-index: 1;
+            background-color: #fafafa;
+            text-indent: 5px;
+            &::placeholder{
+                text-indent: 5px;
+                @extend .header__text;
+            }
+        }
+        button[type="submit"] { 
+            position: absolute;
+            z-index: 2;
+            width: 25%;
+            top: 0;
+            right: 0;
+            background-color: transparent;
+        }
+    }
+
+    .signin{
+        position: relative;
+    }
+    .form-login{
+        position: absolute;
+        top: 100%;
+        z-index: 3;
+        margin-top:15px;
+        border-radius: 5px;
+        opacity: 0;
+        transition: opacity .4s;
+    }
+    .form-login--active{
+        opacity: 1;
+        transition: opacity 1s;
+    }
+
+    a > i{
+        color: $col-3c;
+    }
+
+    .find-location, .love, .cart{
+        & i {
+            font-size: 22px;
+        }
+    }
+    .cart{
+        padding: 15px 0;
+    }
+
+}
+header > .top {
+    height: 86px;
+    background-color: #f7f7f7;
+}
+
+.header-bottom{
+    height: 55px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    background-color: $col-white;
+    position: sticky;
+    top: 0px;
+    padding: 0 15px;
+    &__img{
+        width: 86px;
+        height: 20px;
+        object-fit: fill;
+    }
+    &__list-icon i{
+        font-size: 22px;
+        color: $col-3c;
+    }
+    .list-icon__item{
+        border-left: 1px solid rgba(0,0,0,0.1);
+        padding: 15px 0;
+    }
+    .list-icon__item:last-child{
+        position: relative;
+    }
+
+
+    .list-cate{
+        &__link{
+            font-weight: 700;
+            color: #000;
+            text-transform: uppercase;
+            
+        }
+        &__item{
+            padding: 17px 12px;
+            position: relative;
+            &:hover > .sub-menu{
+                display: initial;
+            }
+            &:hover > .list-cate__link{
+                border-bottom: 1px solid #000;
+                padding-bottom: 1px;
+            }
+            & > .sub-menu{
+                position: absolute;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+                z-index: 4;
+                background-color: $col-white;
+                list-style: none;
+                width: max-content;
+                padding: 0;
+                top: 100%;
+                left : -20%;
+                width: 150px;
+                display: none;
+    
+                .list-cate__item{
+                    padding: 8px 44px 8px 20px;
+                    border-bottom: 1px solid  rgba(0, 0, 0, 0.2);
+                    &:hover {
+                        background-color: #fafafa;
+                    }
+                }
+                .list-cate__link-sub-menu{
+                    font-weight: 500;
+                    color: $col-65;
+                    font-size: 12px;
+                }
+    
+                // & > .list-cate__item .sub-menu{
+                //     display: none;
+                //     left: 100%;
+                //     top: 0%;
+                // }
+                &-child{
+                    display: none;
+                    left: 100%;
+                    top: 0%;
+                }
+            }
+        }
+
+
+        .icon-lable{
+            position: absolute;
+            padding: 1px 7px;
+            border-radius: 20px;
+            display: inline-block;
+            text-align: center;
+            font-size: 10px;
+            color: white;
+            font-weight: 700;
+            top: -10%;
+            left: 50%;
+        }
+        .icon-new{
+            background-color: #43b5f4;
+        }
+        .icon-hot{
+            background-color: #f79a00;
+        }
+        .icon-sale{
+            background-color: #ec4065;
+        }
+    }
+
+}
+
+span.total-cart {
+    display: inline-block;
+    padding: 3px 5px;
+    position: absolute;
+    background: #333;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    top: 5%;
+    left: 50%;
+}
