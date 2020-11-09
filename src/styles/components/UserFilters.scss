@@ -1,0 +1,52 @@
+.filters{
+    background-color: white;
+    .categories{
+        &__list{
+            padding-left: 0;
+            i {
+                margin-left: auto;
+            }
+        }
+        &__link{
+            display: inline-block;
+            font-weight: 600;
+            color: $col-text;
+        }
+        &__item{
+            padding: 3px 0;
+        }
+    }
+
+    &-title{
+        cursor: pointer;
+        font: {
+            weight:700;
+        }
+        color: $col-text;
+        text-transform: uppercase;
+        padding-bottom: 7px;
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+    }
+
+    .checkbox-format{
+        width: 12px;
+    }
+    .types__view, .brands__view, .prices__view .form-groups > label{
+        font-size: 13px;
+    }
+}
+.prices__view, .types__view, .brands__view{
+    transition: all .4s;
+    max-height: 150px;
+    overflow: hidden;
+}
+.view--hidden{
+    max-height: 0px;
+    transition: all .4s;
+    overflow: hidden;
+    
+}
+.feature-img img{
+    width: 100%;
+    object-fit: cover;
+}
