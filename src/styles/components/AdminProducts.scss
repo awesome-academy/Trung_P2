@@ -1,0 +1,108 @@
+.product{
+    &__img {
+        width: 120px;
+        height: 80px;
+        object-fit: contain;
+    }
+    .MuiInputBase-root.MuiInput-root.MuiInput-underline, .MuiFormControl-root{
+        width: 100%;
+    }
+    &__img-upload {
+        margin-top: 10px;
+        width:80%;
+        height: 250px;
+        object-fit: contain;
+    }
+    & thead tr th:nth-child(3) {
+        width: 10%;
+    }
+    td.MuiTableCell-alignLeft {
+        text-align: center;
+    }
+    & thead th {
+        color: white;
+        text-align: center;
+    }
+
+}
+#upImg{
+    display: none;
+}
+.custom-button-upload-img{
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    i{
+        margin-right: 10px;
+    }
+}
+
+.detail-product{
+    box-shadow: 0 0 4px 2px rgba(0,0,0,.1);
+    border-radius: 5px;
+    background-color: $col-white;
+    &__img{
+        width: 90%;
+        object-fit: cover;
+        margin: auto;
+        height: 175px;
+        margin-top: 30px;
+    }
+    &__name{
+        text-align: center;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    &__rate{
+        margin: 5px 0;
+        i.fas.fa-star{
+            color: #ffc50a;
+        }
+        &-number{
+            color: $col-89;
+            margin-left: 15px;
+            text-transform: initial;
+        }
+    }
+    &__price { 
+        &-format{
+            color:#e7040f;
+            font-weight: bold;
+        }
+    }
+    &__chart .chart-all__block {
+        width: 100% !important;
+    }
+    &__chart{
+        border-top:1px dotted rgba(0,0,0,.2);
+    }
+    .close-detail-product{
+        width: 25px;
+        height: 25px;
+        border-bottom-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border:0;
+        color:red;
+        top:0;
+        right:0;
+        cursor: pointer;
+        outline: none;
+        background-color: transparent;
+        &:hover{
+            background-color: rgba(0,0,0,.1);
+        }
+    }
+
+    &__category,&__comment, &__rate, &__sale, &__name, &__price{
+        color: #171717;
+        font-weight: 600;
+        margin:5px 0;
+        &-format{
+            color: #636363;
+        }
+    }
+
+
+}
+// .dasboard .detail-product_chart

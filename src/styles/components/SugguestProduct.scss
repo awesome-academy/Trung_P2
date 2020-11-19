@@ -1,0 +1,29 @@
+.sugguest{
+    background-color: #f4f4f4;
+    padding: 0 0 40px 0;
+    &__img {
+        width: 150px;
+    }
+    &__logo{
+        padding: 20px 0;
+        border: 1px solid rgba(0,0,0,0.1);
+    }
+    &__title{
+        font-size: 26px;
+        text-transform: capitalize;
+        font-weight: 700;
+        margin: 20px 0 0;
+        letter-spacing: 0.05em;
+    }
+    &__ques{
+        color: rgba(0,0,0,0.6);
+        margin: 10px 0 0;
+    }
+    &__form{
+        width: 40%;
+        margin: auto;
+    }
+    .btn-checkout-format{
+        background-color: #000;
+    }
+}

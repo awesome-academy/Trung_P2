@@ -1,0 +1,223 @@
+%common_pa{
+    font-weight: 400;
+    text-align: left;
+    font-size: 12px;
+    color: #2d2d2d;
+    font-family: sans-serif,"Arial","sans-serif";
+    line-height: 22px;
+    letter-spacing: .02em;
+    margin: 25px 0;
+}
+%name-product{
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #191919;
+    font-size: 17px;
+    font-family: sans-serif,"Arial","sans-serif";
+}
+.product-detail{
+    &__img{
+        width: 95%;
+        height: 480px;
+        object-fit: cover;
+    }
+    &__name{
+        @extend %name-product;
+    }
+    &__rate{
+        padding: 15px 0;
+        i.fas {
+            color: #ffc50a;
+            padding-right: 5px;
+            font-size: 12px;
+        }
+        .number-reivew{
+            margin: 0 0 0 20px !important;
+            display: inline-block;
+        }
+    }
+    &__title{
+        font-weight: 600;
+        color: #191919;
+        font-size: 14px;
+        width: 25%;
+        display: inline-block;
+    }
+    &__title--bold{
+        font-weight: bold;
+    }
+    &__price{
+        margin: 25px 0;
+        font-size: 1.2em;
+        .format-price{
+            text-decoration: line-through;
+            color: #696969;
+            font-weight: 700;
+            margin-right: 8px;
+        }
+        &-current{
+            color: #e7040f;
+            font-weight: 600;
+        }
+    }
+    &__des,  &__title-val, .number-reivew{
+        @extend %common_pa;
+    }
+    &__inp{
+        line-height: 22px;
+        border-radius: 5px;
+        outline: none;
+        border: 1px solid rgba(0,0,0, 0.2);
+        display: inline-block;
+        text-align: center;
+        padding:5px;
+        width: 75px;
+        color: #2d2d2d;
+    }
+    .btn-add-to-cart{
+        @extend %btn-add-cart;
+    }
+}
+
+%btn-add-cart{
+    display: initial;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-top: 45px;
+    background-color: #333;
+    color: $col-white;
+    &:hover{
+        background-color: #e7040f;
+    }
+}
+
+.btn-checkout-format{
+    background-color: #fa424e;
+    cursor: pointer;
+    padding: 10px 27px;
+    border-radius: 5px;
+    color: white;
+    border: 0;
+    text-transform: uppercase;
+    text-align: center;
+    outline: none;
+    &:hover{
+        background-color: #e7040f;
+        color: white;
+    }
+    &:focus{
+        outline: none;
+    }
+}
+
+.btn-react-share{
+    border-top: 1px solid rgba(0,0,0, 0.1);
+    padding:15px ;
+    button.react-share__ShareButton.share {
+        outline: none;
+        margin-right: 15px;
+    }
+
+}
+
+.tabs{
+    width: 90%;
+    margin: auto;
+    &-title{
+        width: 100%;
+        border-bottom: 1px solid rgba(0,0,0, 0.2);
+        padding-left: 0;
+    }
+    &__list{
+        margin-bottom: 0 ;
+    }
+    &__item{
+        padding: 10px 25px;
+        background-color: #fafafa;
+        border : 1px solid rgba(0,0,0, 0.1);
+        border-bottom: 0;
+        color: $col-text;
+        cursor: pointer;
+        font : {
+            weight : 600;
+            size : 16px;
+        }
+        &--active {
+            border-top : 2px solid rgba(0,0,0, 1);
+            background-color: $col-white;
+        }
+    }
+}
+
+
+.descripts{
+
+    &__pa{
+        @extend %common_pa;
+    }
+    &__title{
+        @extend %common_pa;
+        font-weight: 600;
+        font-size: 13px;
+        margin-bottom: 7px;
+    }
+    ul, ol{
+        position: relative;
+        left: 5%;
+    }
+}
+
+.review{
+    &__img{
+        width: 48px;
+        height: 48px;
+    }
+    &__name{
+        color: rgb(36, 36, 36);
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 600;
+        margin-left: 10px;
+    }
+    .MuiRating-label {
+        font-size: 18px;
+    }
+    &__des{
+        text-size-adjust: 100%;
+        word-break: break-word;
+        color: rgb(36, 36, 36);
+        box-sizing: border-box;
+        font-size: 14px;
+        line-height: 20px;
+        margin: 0px 0px 8px;
+    }
+    &__link{
+        text-size-adjust: 100%;
+        padding: 8px 16px 9px;
+        font-size: 14px;
+        line-height: 20px;
+        color: rgb(13, 92, 182);
+        font-weight: 500;
+        cursor: pointer;
+        user-select: none;
+    }
+    &__block:not(:first-child){
+        border-top : 1px solid rgba(0,0,0, 0.1);
+    }
+    .comment{
+        width: 100%;
+        height: 75px;
+        outline: none;
+        border: 1px solid rgba(0,0,0,0.1);
+        padding: 5px;
+    }
+}
+.form-reply{
+    display: none;
+}
+.form-reply--active{
+    display: block;
+}

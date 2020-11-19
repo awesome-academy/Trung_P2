@@ -1,0 +1,115 @@
+.cart{
+    &__title{
+        font: {
+            size: 20px;
+            weight: 700;
+        };
+        text-transform: uppercase;
+    }
+    &__products{
+        background-color: #fafafa;
+        padding: 15px;
+    }
+    .product{
+        background-color: $col-white;
+        border-radius: 5px;
+        margin: auto;
+        padding-left: 10px;
+        &__img{
+            width: 107px;
+            height: 107px;
+            object-fit: cover;
+        } 
+        &__info{
+            flex: 1;
+        }
+        &__link-name{
+            @extend %name-product;
+            font-size: 14px;
+        }
+        &__des{
+            font-size: 13px;
+        }
+        &__price{
+            font-weight: 600;
+            margin: 10px 0;
+        }
+        &-detail__title{
+            width: 33%;
+        }
+        form{
+            width: 30%;
+        }
+    }
+    .btn-add-cart {
+        display: initial;
+        position: relative;
+        margin-top: 0;
+    }
+    .btn-remove{
+        background-color: $col-white;
+        border: 1px solid rgba(0,0,0, 0.2);
+        color : $col-text;
+        &:hover {
+            border: 1px solid #e7040f;
+            color : #e7040f;
+        }
+    }
+
+    .cart__wapper{
+        padding: 15px 10px;
+        background-color: #fafafa;
+    }
+    .cart__info{
+        width: 95%;
+        padding: 10px 15px;
+        margin: auto;
+        background-color: white;
+        
+        &-title{
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+    .cart__price{
+        font-weight: 700;
+    }
+    // .note-title{
+    //     font-weight: 700;
+    //     font-size: 11px;
+    //     margin-left: 10px;
+    //     color: #494949;
+    // }
+    // .comment{
+    //     width: 100%;
+    //     border:1px solid rgba(0,0,0, 0.1);
+    //     outline: none;
+    //     padding: 10px;
+    // }
+    // .note{
+    //     display: inline-block;
+    //     padding: 0px 7px 2px;
+    //     border-radius: 10px;
+    //     background-color: green;
+    //     color: white;
+    //     font-size: 11px;
+    //     font-weight: 700;
+    // }
+    .btn-checkout{
+        width: 100%;
+        background-color: rgb(250, 66,78);
+        outline: none;
+        cursor: pointer;
+        padding: 6px 24px;
+        border-radius: 5px;
+        color: white;
+        border: 0;
+        text-transform: uppercase;
+        &:hover{
+            background-color: rgb(250, 15,30);
+        }
+    }
+}
+.countinue-shopping a{
+    color: $col-text1;
+}
